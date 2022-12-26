@@ -1,5 +1,4 @@
-
-
+package DesignPatterns.Singleton;
 public class LoggerExample{
     public static void main(String[] args) throws InterruptedException{
         Thread threadOne = new Thread() {

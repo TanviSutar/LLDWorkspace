@@ -1,5 +1,5 @@
 
-package DesignPatterns.FactoryMethod;
+package DesignPatterns.FactoryMethod.pizzaStore;
 
 import DesignPatterns.FactoryMethod.pizza.Pizza;
 

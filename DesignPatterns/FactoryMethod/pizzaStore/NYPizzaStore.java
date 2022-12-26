@@ -1,4 +1,4 @@
-package DesignPatterns.FactoryMethod;
+package DesignPatterns.FactoryMethod.pizzaStore;
 
 import DesignPatterns.FactoryMethod.pizza.Pizza;
 import DesignPatterns.FactoryMethod.pizza.NYStyleCheesePizza;
