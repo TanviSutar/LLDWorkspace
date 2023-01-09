@@ -11,12 +11,22 @@ import DesignPatterns.Observer.subject.WeatherSubject;
 public class TestObserver {
     public static void main(String []args){
         WeatherSubject weatherSubject = new ConcreteWeatherSubject();
-        Display currentDisplay = new CurrentWeatherDisplay();
-        Display weatherForecastDisplay = new WeatherForecast();
-        Display weatherStatsDisplay = new WeatherStatsDisplay();
-        weatherSubject.registerObserver((WeatherObserver)currentDisplay);
-        weatherSubject.registerObserver((WeatherObserver)weatherForecastDisplay);
-        weatherSubject.registerObserver((WeatherObserver)weatherStatsDisplay);
+
+        System.out.println("Current display registered.");
+        Display currentDisplay = new CurrentWeatherDisplay(weatherSubject);
+
+        System.out.println("Weather Forecast display registered.");
+        Display weatherForecastDisplay = new WeatherForecast(weatherSubject);
+
+        System.out.println("WeatherStats registered.");
+        Display weatherStatsDisplay = new WeatherStatsDisplay(weatherSubject);
+        
+        System.out.println("Measurements updated");
         ((ConcreteWeatherSubject) weatherSubject).updateMeasurements(34,12,10);
+
+        System.out.println("Current display unregistered.");
+        weatherSubject.unregisterObserver((WeatherObserver) currentDisplay);
+        System.out.println("Measurements updated.");
+        ((ConcreteWeatherSubject) weatherSubject).updateMeasurements(120, 130, 140);
     }
 }

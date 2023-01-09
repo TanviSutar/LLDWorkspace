@@ -1,11 +1,18 @@
 package DesignPatterns.Observer.display;
 
 import DesignPatterns.Observer.observer.WeatherObserver;
+import DesignPatterns.Observer.subject.WeatherSubject;
 
 public class WeatherForecast implements Display, WeatherObserver{
     private int temperature;
     private int humidity;
     private int pressure;
+    private WeatherSubject subject;
+
+    public WeatherForecast(WeatherSubject weatherSubject){
+        this.subject = weatherSubject;
+        subject.registerObserver(this);
+    }
 
     @Override
     public void display() {
