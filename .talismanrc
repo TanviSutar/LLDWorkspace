@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: DesignPatterns/Adapter/AdapterDemo.java
+  checksum: 4e8486250bd07292a007146ac47d65363ee4ff4ca0317fe5d3e0d2f046768916
+version: ""
