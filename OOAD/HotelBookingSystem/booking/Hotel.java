@@ -16,5 +16,4 @@ public class Hotel {
     public String getFranchiseName() {
         return franchiseName;
     }
-
 }

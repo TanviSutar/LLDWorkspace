@@ -25,6 +25,14 @@ public class Room {
         return roomStatus;
     }
 
+    public void book() {
+        roomStatus = RoomStatus.BOOKED;
+    }
+
+    public void unbook() {
+        roomStatus = RoomStatus.AVAILABLE;
+    }
+
     public double getCostPerDay() {
         return costPerDay;
     }
